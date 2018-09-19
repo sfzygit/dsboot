@@ -14,8 +14,8 @@ import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
-@WebFilter(urlPatterns = {"/dsboot/*"},filterName ="authTokenFilter")
+//@Configuration
+//@WebFilter(urlPatterns = "/*",filterName ="authTokenFilter")
 public class AuthTokenFilter implements Filter {
 
     @Override
@@ -31,7 +31,12 @@ public class AuthTokenFilter implements Filter {
 
         boolean isNeedAuth = true;
         String requestPath = req.getRequestURI().toString();
+        // login 不作过滤
         if(requestPath.contains("/dsboot/user/login")){
+            isNeedAuth = false;
+        }
+        // swagger url 不作过滤
+        if(requestPath.indexOf("swagger")>-1 || requestPath.indexOf("v2/api-docs")>-1){
             isNeedAuth = false;
         }
         String token = req.getHeader("Token");

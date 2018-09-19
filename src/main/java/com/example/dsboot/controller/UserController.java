@@ -15,10 +15,10 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping(value="/user")
-@Api("用户管理")
+@Api(description = "用户管理")
 public class UserController {
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    @ApiOperation("user login")
+    @ApiOperation(value = "user login")
     public UserDto userLogin(
             @RequestParam String userName,
             @RequestParam String password
@@ -39,5 +39,13 @@ public class UserController {
             return userDto;
         }
 
+    }
+
+    @RequestMapping(value = "/serviceUA",method = RequestMethod.GET)
+    @ApiOperation(value = "service UA")
+    public String serviceUA(
+            @RequestParam String userId
+    ){
+        return userId;
     }
 }

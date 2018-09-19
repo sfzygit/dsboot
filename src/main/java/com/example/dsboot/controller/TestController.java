@@ -12,11 +12,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/test")
-@Api("测试api")
+@Api(description = "测试api")
 public class TestController {
 
     @RequestMapping(value = "/serviceA",method = RequestMethod.GET)
-    @ApiOperation("service A")
+    @ApiOperation(value = "service A")
     public Map<String,String> serviceA(
             @RequestParam(required = false,defaultValue = "default value") String param
     ) {
