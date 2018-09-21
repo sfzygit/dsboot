@@ -3,13 +3,13 @@ package com.example.dsboot.model;
 public class User {
     private Integer id;
 
-    private String name;
+    private String tName;
 
-    private String desc;
+    private String tDesc;
 
-    private String status;
+    private String tStatus;
 
-    private String password;
+    private String tPassword;
 
     public Integer getId() {
         return id;
@@ -19,35 +19,35 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String gettName() {
+        return tName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void settName(String tName) {
+        this.tName = tName == null ? null : tName.trim();
     }
 
-    public String getDesc() {
-        return desc;
+    public String gettDesc() {
+        return tDesc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void settDesc(String tDesc) {
+        this.tDesc = tDesc == null ? null : tDesc.trim();
     }
 
-    public String getStatus() {
-        return status;
+    public String gettStatus() {
+        return tStatus;
     }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void settStatus(String tStatus) {
+        this.tStatus = tStatus == null ? null : tStatus.trim();
     }
 
-    public String getPassword() {
-        return password;
+    public String gettPassword() {
+        return tPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+    public void settPassword(String tPassword) {
+        this.tPassword = tPassword == null ? null : tPassword.trim();
     }
 }

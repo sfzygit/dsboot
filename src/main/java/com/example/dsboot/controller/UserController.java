@@ -33,8 +33,8 @@ public class UserController {
     ){
 
         User user = new User();
-        user.setName(userName);
-        user.setPassword(password);
+        user.settName(userName);
+        user.settPassword(password);
         return  userService.login(user);
 
 //        UserDto userDto = new UserDto();
